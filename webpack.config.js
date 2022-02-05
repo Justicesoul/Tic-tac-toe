@@ -39,19 +39,20 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: 'src/index.html',
-    favicon: 'favicon.png',
-    chunks: [],
-  }),
-  new CopyPlugin({
-    patterns: [
-      {
-        from: 'src/assets',
-        to: 'assets',
-      },
-    ],
-  }),
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      favicon: 'favicon.jpg',
+      chunks: [],
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'src/assets',
+          to: 'assets',
+        },
+      ],
+    }),
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
